@@ -1,7 +1,11 @@
 {
 	"name": "design-system-base-component",
 	"version": "1.0.0",
-	"dependencies": {
-		"elix": "JanMiksovsky/elix#slds"
+	"devDependencies": {
+		"elix": "^11.0.1",
+		"http-server": "^0.12.1"
+	},
+	"scripts": {
+		"start": "npx http-server"
 	}
 }
