@@ -1,0 +1,7 @@
+{
+	"name": "design-system-base-component",
+	"version": "1.0.0",
+	"dependencies": {
+		"elix": "JanMiksovsky/elix#slds"
+	}
+}

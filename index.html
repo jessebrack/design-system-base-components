@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="main.css" />
+		<script type="module" src="src/primitive/VStack.js"></script>
+
+		<script type="module" src="src/sds/SdsIcon.js"></script>
+		<script type="module" src="src/sds/SdsCard.js"></script>
+
+		<script type="module" src="src/slds/SldsButton.js"></script>
+		<script type="module" src="src/slds/SldsButtonIcon.js"></script>
+		<script type="module" src="src/slds/SldsButtonMenu.js"></script>
+		<script type="module" src="src/slds/SldsDropdownList.js"></script>
+
+		<script type="module" src="src/slds/SldsCard.js"></script>
+		<script type="module" src="src/trailhead/TrailheadCard.js"></script>
+
+		<script type="module" src="src/define/ThemeProvider.js"></script>
+
+		<script type="module" src="./node_modules/elix/define/Button.js"></script>
+		<script
+			type="module"
+			src="./node_modules/elix/define/BorderButton.js"
+		></script>
+		<script
+			type="module"
+			src="./node_modules/elix/define/MenuButton.js"
+		></script>
+		<script
+			type="module"
+			src="./node_modules/elix/define/DropdownList.js"
+		></script>
+	</head>
+
+	<body>
+		<header></header>
+		<main>
+			<div class="ds-theme">
+				<h3>Product (LEX)</h3>
+				<div class="components">
+					<sds-theme-provider theme="slds">
+						<slds-card title="SLDS Card Title">
+							<slds-button slot="headerActions" variant="neutral"
+								>New</slds-button
+							>
+							<img
+								id="image"
+								slot="above-content"
+								src="../../images/carousel/carousel-01.jpg"
+								alt=""
+							/>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+							eget velit placerat, scelerisque libero sed, mattis orci.
+						</slds-card>
+					</sds-theme-provider>
+				</div>
+			</div>
+			<div class="ds-theme">
+				<h3>Trailhead</h3>
+				<div class="components">
+					<sds-theme-provider theme="trailhead">
+						<th-card title="Trailhead Card Title">
+							<img
+								id="image"
+								slot="above-content"
+								src="../../images/carousel/carousel-01.jpg"
+								alt=""
+							/>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+							eget velit placerat, scelerisque libero sed, mattis orci.
+						</th-card>
+					</sds-theme-provider>
+				</div>
+			</div>
+
+			<div class="sds">
+				<h3>Salesforce Design System (Styling API)</h3>
+				<div class="components">
+					<slds-button>Text Button</slds-button>
+					<slds-button variant="neutral">Button</slds-button>
+					<slds-button variant="brand">Button</slds-button>
+
+					<sds-icon boundarysize="small"></sds-icon>
+					<sds-icon set="standard" symbol="opportunity"></sds-icon>
+					<sds-icon set="standard" symbol="case" size="large"></sds-icon>
+
+					<slds-button-icon symbol="add" variant="neutral" size="medium"></slds-button-icon>
+
+					<slds-button-menu variant="neutral">
+						<div>One</div>
+						<div>Two</div>
+						<div>Three</div>
+						<div>Four</div>
+					</slds-button-menu>
+
+					<slds-dropdown-list variant="neutral" aria-label="Skill level">
+						<div>Beginner</div>
+						<div>Intermediate</div>
+						<div>Expert</div>
+					</slds-dropdown-list>
+
+					<sds-card title="Card Title">
+						Content Card
+						<span slot="footer">Card Footer</span>
+					</sds-card>
+				</div>
+			</div>
+			<div class="ds-kernels">
+				<h3>Base Web Component (OS)</h3>
+				<div class="components">
+					<elix-button>Button</elix-button>
+					<elix-border-button>Button</elix-border-button>
+					<elix-menu-button>
+						<div>One</div>
+						<div>Two</div>
+						<div>Three</div>
+						<div>Four</div>
+					</elix-menu-button>
+					<elix-dropdown-list aria-label="Skill level">
+						<div>Beginner</div>
+						<div>Intermediate</div>
+						<div>Expert</div>
+					</elix-dropdown-list>
+					<primitive-v-stack>
+						<div slot="above-content">VStack above content</div>
+						VStack content
+						<div slot="below-content">VStack below content</div>
+					</primitive-v-stack>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
