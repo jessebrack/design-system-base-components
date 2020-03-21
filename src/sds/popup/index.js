@@ -1,5 +1,5 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import Popup from "/node_modules/elix/src/base/Popup.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import Popup from "../../../node_modules/elix/src/base/Popup.js";
 import SldsOverlayFrame from "../../slds/overlayFrame/index.js";
 
 /**
@@ -8,7 +8,7 @@ import SldsOverlayFrame from "../../slds/overlayFrame/index.js";
 export default class SdsPopup extends Popup {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
-      framePartType: SldsOverlayFrame
+      framePartType: SldsOverlayFrame,
     });
   }
 }

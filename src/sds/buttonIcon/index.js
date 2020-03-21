@@ -1,8 +1,7 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import * as template from "/node_modules/elix/src/core/template.js";
-import Button from "/node_modules/elix/src/base/Button.js";
-import html from "/node_modules/elix/src/core/html.js";
-import SdsIcon from "../icon/index.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import * as template from "../../../node_modules/elix/src/core/template.js";
+import Button from "../../../node_modules/elix/src/base/Button.js";
+import html from "../../../node_modules/elix/src/core/html.js";
 
 /**
  * SLDS variation of an Elix [Button](https://component.kitchen/elix/Button).
@@ -14,7 +13,7 @@ export default class SdsButtonIcon extends Button {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       variant: "bare",
-      symbol: "chevrondown"
+      symbol: "chevrondown",
     });
   }
 
@@ -43,9 +42,7 @@ export default class SdsButtonIcon extends Button {
     super[internal.render](changed);
 
     if (changed.variant) {
-      const computedSizeClassName = `lwc-button-icon_${
-        this[internal.state].variant
-      }`;
+      const computedSizeClassName = `lwc-button-icon_${this[internal.state].variant}`;
       this[internal.ids].inner.classList.add(computedSizeClassName);
     }
   }
@@ -58,6 +55,7 @@ export default class SdsButtonIcon extends Button {
       slot,
       html`
         <sds-icon
+          id="icon"
           boundarysize=${this[internal.state].size}
           symbol=${this[internal.state].symbol}
         ></sds-icon>

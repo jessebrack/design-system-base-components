@@ -1,6 +1,6 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import html from "/node_modules/elix/src/core/html.js";
-import OverlayFrame from "/node_modules/elix/src/base/OverlayFrame.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import html from "../../../node_modules/elix/src/core/html.js";
+import OverlayFrame from "../../../node_modules/elix/src/base/OverlayFrame.js";
 
 /**
  * SLDS variation of an Elix [OverlayFrame](https://component.kitchen/elix/OverlayFrame).

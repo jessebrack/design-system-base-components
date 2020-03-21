@@ -1,6 +1,6 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import * as template from "/node_modules/elix/src/core/template.js";
-import html from "/node_modules/elix/src/core/html.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import * as template from "../../../node_modules/elix/src/core/template.js";
+import html from "../../../node_modules/elix/src/core/html.js";
 import VStack from "../../base/VStack/index.js";
 
 const header = title => {
@@ -32,7 +32,7 @@ export default class SdsCard extends VStack {
     return Object.assign(super[internal.defaultState], {
       headerPartType: header("Card Title"),
       titlePartType: "h2",
-      footerPartType: footer()
+      footerPartType: footer(),
     });
   }
 

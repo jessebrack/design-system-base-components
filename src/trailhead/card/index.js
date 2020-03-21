@@ -1,6 +1,5 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import html from "/node_modules/elix/src/core/html.js";
-import * as template from "/node_modules/elix/src/core/template.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import html from "../../../node_modules/elix/src/core/html.js";
 import SdsCard from "../../sds/card/index.js";
 import SomeRandomComponent from "../../vendor/SomeRandomComponent.js";
 
@@ -15,7 +14,7 @@ export default class TrailheadCard extends SdsCard {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       titlePartType: "h3",
-      contentPartType: SomeRandomComponent
+      contentPartType: SomeRandomComponent,
     });
   }
 

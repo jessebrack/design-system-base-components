@@ -1,6 +1,6 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import html from "/node_modules/elix/src/core/html.js";
-import * as template from "/node_modules/elix/src/core/template.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import html from "../../../node_modules/elix/src/core/html.js";
+import * as template from "../../../node_modules/elix/src/core/template.js";
 import SdsCard from "../../sds/card/index.js";
 import SdsIcon from "../../sds/icon/index.js";
 
@@ -17,7 +17,7 @@ export default class SldsCard extends SdsCard {
     return Object.assign(super[internal.defaultState], {
       titlePartType: "h3",
       iconPartType: SdsIcon,
-      footerPartType: footer()
+      footerPartType: footer(),
     });
   }
 

@@ -1,6 +1,6 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import Button from "/node_modules/elix/src/base/Button.js";
-import html from "/node_modules/elix/src/core/html.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import Button from "../../../node_modules/elix/src/base/Button.js";
+import html from "../../../node_modules/elix/src/core/html.js";
 
 /**
  * SLDS variation of an Elix [Button](https://component.kitchen/elix/Button).

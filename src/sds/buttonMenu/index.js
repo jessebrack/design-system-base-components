@@ -1,10 +1,7 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import * as template from "/node_modules/elix/src/core/template.js";
-import html from "/node_modules/elix/src/core/html.js";
-import MenuButton from "/node_modules/elix/src/base/MenuButton.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import MenuButton from "../../../node_modules/elix/src/base/MenuButton.js";
 import SdsButtonIcon from "../buttonIcon/index.js";
 import SldsMenu from "../menu/index.js";
-import SdsIcon from "../icon/index.js";
 import SdsPopup from "../popup/index.js";
 
 /**
@@ -21,7 +18,7 @@ export default class SdsButtonMenu extends MenuButton {
       popupTogglePartType: null,
       sourcePartType: SdsButtonIcon,
       variant: "neutral",
-      symbol: "chevrondown"
+      symbol: "chevrondown",
     });
   }
 
@@ -51,27 +48,14 @@ export default class SdsButtonMenu extends MenuButton {
 
     if (changed.variant) {
       const shadow = this.shadowRoot.getElementById("source");
-      // shadow.variant = this[internal.state].variant;
+      shadow.variant = this[internal.state].variant;
     }
 
     if (changed.symbol) {
       const shadow = this.shadowRoot.getElementById("source");
-      // console.log(shadow.symbol);
-      shadow.symbol = this[internal.state].symbol;
+      const iconPart = shadow.shadowRoot.getElementById("icon");
+      iconPart.symbol = this[internal.state].symbol;
     }
-  }
-
-  get [internal.template]() {
-    const result = super[internal.template];
-
-    // const slot = result.content.querySelector('#inner');
-    // console.log(result);
-    // template.replace(
-    // 	slot,
-    // 	html`<sds-icon boundarysize=${this[internal.state].size} symbol=${this[internal.state].symbol}></sds-icon>`
-    // );
-
-    return result;
   }
 }
 

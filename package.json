@@ -5,6 +5,6 @@
 		"elix": "^11.0.1"
 	},
 	"scripts": {
-		"start": "node server.js"
+		"start": "npx serve"
 	}
 }

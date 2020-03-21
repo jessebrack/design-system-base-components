@@ -1,9 +1,9 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import CarouselSlideshow from "/node_modules/elix/src/base/CarouselSlideshow.js";
-import CenteredStrip from "/node_modules/elix/src/base/CenteredStrip.js";
-import html from "/node_modules/elix/src/core/html.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import CarouselSlideshow from "../../../node_modules/elix/src/base/CarouselSlideshow.js";
+import CenteredStrip from "../../../node_modules/elix/src/base/CenteredStrip.js";
+import html from "../../../node_modules/elix/src/core/html.js";
+import SlidingStage from "../../../node_modules/elix/src/base/SlidingStage.js";
 import SldsPageDot from "../pageDot/index.js";
-import SlidingStage from "/node_modules/elix/src/base/SlidingStage.js";
 
 /**
  * SLDS variation of an Elix [CarouselSlideshow](https://component.kitchen/elix/CarouselSlideshow).
@@ -29,7 +29,7 @@ export default class SldsCarouselSlideshow extends CarouselSlideshow {
       proxyPartType: SldsPageDot,
       selectionTimerDuration: 5000,
       showArrowButtons: false,
-      stagePartType: SlidingStage
+      stagePartType: SlidingStage,
     });
   }
 

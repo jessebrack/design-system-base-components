@@ -1,6 +1,6 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import html from "/node_modules/elix/src/core/html.js";
-import Menu from "/node_modules/elix/src/base/Menu.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import html from "../../../node_modules/elix/src/core/html.js";
+import Menu from "../../../node_modules/elix/src/base/Menu.js";
 
 /**
  * SLDS variation of an Elix [Menu](https://component.kitchen/elix/Menu).
@@ -8,7 +8,7 @@ import Menu from "/node_modules/elix/src/base/Menu.js";
 export default class SldsMenu extends Menu {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
-      generic: false
+      generic: false,
     });
   }
 

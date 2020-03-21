@@ -22,7 +22,7 @@ npm start
 
 This project requires little to no dependencies. The primitive layers requires Elix, which serves the customizable web components to build our interfaces for our Design System and its Sub Systems.
 
-- `Node ^8.x` for a static web server to manage mime/type content headers.
+- `Node ^8.x` for a static web server to load ES modules.
 - `Elix` for customizable authored web components.
 
 

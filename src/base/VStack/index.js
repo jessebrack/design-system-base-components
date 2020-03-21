@@ -1,6 +1,6 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import * as template from "/node_modules/elix/src/core/template.js";
-import ReactiveElement from "/node_modules/elix/src/core/ReactiveElement.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import * as template from "../../../node_modules/elix/src/core/template.js";
+import ReactiveElement from "../../../node_modules/elix/src/core/ReactiveElement.js";
 
 const Base = ReactiveElement;
 
@@ -10,7 +10,7 @@ export default class VStack extends Base {
       sourcePartType: "article",
       headerPartType: "header",
       contentPartType: "div",
-      footerPartType: "footer"
+      footerPartType: "footer",
     });
   }
 

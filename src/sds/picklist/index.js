@@ -1,7 +1,5 @@
-import * as internal from "/node_modules/elix/src/base/internal.js";
-import * as template from "/node_modules/elix/src/core/template.js";
-import DropdownList from "/node_modules/elix/src/base/DropdownList.js";
-import html from "/node_modules/elix/src/core/html.js";
+import * as internal from "../../../node_modules/elix/src/base/internal.js";
+import DropdownList from "../../../node_modules/elix/src/base/DropdownList.js";
 import SdsButton from "../button/index.js";
 import SldsMenu from "../menu/index.js";
 import SdsPopup from "../popup/index.js";
@@ -17,7 +15,7 @@ export default class SdsDropdownList extends DropdownList {
       menuPartType: SldsMenu,
       popupPartType: SdsPopup,
       popupTogglePartType: SdsIcon,
-      sourcePartType: SdsButton
+      sourcePartType: SdsButton,
     });
   }
 
