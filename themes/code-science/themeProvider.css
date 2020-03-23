@@ -1,0 +1,35 @@
+:host {
+	--theme-background: #F5F6F9;
+
+	/* ================
+     SDS Styling API (Globals)
+     ================= */
+
+  /* Globals */
+  --lwc-brand-accessible: #2374F3;
+	--lwc-font-family: "Open Sans", Arial, sans-serif;
+
+  /* Button Component */
+  --lwc-c-button-font-size: 0.75rem;
+  --lwc-c-button-padding: 0.25rem 1rem;
+  --lwc-c-button-font-weight: bold;
+  --lwc-c-button-border-width: 0;
+
+  --lwc-c-button-neutral-color-text: #7A797A;
+  --lwc-c-button-neutral-color-background: #F4F3F4;
+	--lwc-c-button-brand-shadow: 0 2px 4px rgba(26, 30, 98, .3), 0 6px 8px rgba(9, 97, 155, .4);
+
+  /* Card Component */
+  --lwc-c-card-shadow: #0000000f 0px 1px 8px 8px;
+  --lwc-c-card-border-width: 0;
+  --lwc-c-card-padding: 0;
+  --lwc-c-card-radius: 4px;
+  --lwc-c-card-font-size: 0.825rem;
+
+  --lwc-c-card-header-spacing-vertical-end: 1rem;
+
+  --lwc-c-card-footer-text-align: left;
+  --lwc-c-card-footer-spacing-horizontal-start: 1.5rem;
+	--lwc-c-card-footer-spacing-horizontal-end: 1.5rem;
+  --lwc-c-card-footer-spacing-vertical-end: 1.5rem;
+}

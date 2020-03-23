@@ -3,10 +3,11 @@ import * as template from "../node_modules/elix/src/core/template.js";
 import ReactiveElement from "../node_modules/elix/src/core/ReactiveElement.js";
 
 export default class ThemeProvider extends ReactiveElement {
-  get [internal.defaultState]() {
-    return Object.assign(super[internal.defaultState], {
-      theme: "sds"
-    });
+  get system() {
+    return this[internal.state].system;
+  }
+  set system(system) {
+    this[internal.setState]({ system });
   }
 
   get theme() {
@@ -19,10 +20,21 @@ export default class ThemeProvider extends ReactiveElement {
   [internal.render](changed) {
     super[internal.render](changed);
 
-    if (changed.theme) {
+    if (changed.system && !changed.theme) {
+      console.log(this[internal.state].system);
       const style = template.createElement("style");
       style.textContent = `
-				@import url("../themes/${this[internal.state].theme}/themeProvider.css");
+				@import url("../themes/${this[internal.state].system}/themeProvider.css");
+			`;
+      template.replace(this[internal.ids].import, style);
+    }
+
+    if (changed.system && changed.theme) {
+      console.log(this[internal.state].theme);
+      const style = template.createElement("style");
+      style.textContent = `
+      @import url("../themes/${this[internal.state].system}/themeProvider.css");
+      @import url("../themes/${this[internal.state].theme}/themeProvider.css");
 			`;
       template.replace(this[internal.ids].import, style);
     }
@@ -36,7 +48,7 @@ export default class ThemeProvider extends ReactiveElement {
 						display: block;
           }
           ::slotted(.background) {
-            padding: 2rem;
+            padding: 1rem;
 						background: var(--theme-background);
           }
 				</style>

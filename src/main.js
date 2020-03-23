@@ -21,6 +21,8 @@ import TrailheadButtonIcon from "./trailhead/buttonIcon/index.js";
 import TrailheadImageCard from "./trailhead/imageCard/index.js";
 import TrailheadTrailCard from "./trailhead/trailCard/index.js";
 
+import CodeScienceCard from "./codeScience/card/index.js";
+
 export default {
   Button,
   BorderButton,
@@ -38,5 +40,6 @@ export default {
   SldsCard,
   TrailheadButtonIcon,
   TrailheadImageCard,
-  TrailheadTrailCard
+  TrailheadTrailCard,
+  CodeScienceCard
 };

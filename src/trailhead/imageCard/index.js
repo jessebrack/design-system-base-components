@@ -37,7 +37,7 @@ export default class TrailheadImageCard extends SdsCard {
       html`
         <style>
           :host {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
           }
           ::part(source) {
             padding: 0;

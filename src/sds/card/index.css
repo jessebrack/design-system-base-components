@@ -73,9 +73,9 @@
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	white-space: var(--lwc-c-card-title-white-space, nowrap);
 	font-size: var(--lwc-c-card-title-font-size, var(--var-font-size-5, 1rem));
-	line-height: 2rem;
+	line-height: var(--lwc-c-card-title-line-height, 2rem);
 	font-weight: var(--lwc-c-card-title-font-weight, 700);
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 0%;

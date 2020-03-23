@@ -49,11 +49,15 @@ This project requires little to no dependencies. The primitive layers requires E
   Though not illustrated in the folder structure, **base** is the foundational base web components layer (all of Elix plus a new component). Then the **sds** namespace is applied on top of the base layer. Then **slds** and **trailhead** use the Syling API and template patching to create their respective namespaced components.
 
 ```
-| Subsystems: | slds | trailhead |
-|--------------------------------|
-| Design System: |      sds      |
-|--------------------------------|
-| Base Web Components:  |  base  |
+| Products:   |  A  |  B  |   trailhead   |
+|-----------------------------------------|
+| Subsystems: |    slds   |   trailhead   |
+|-----------------------------------------|
+| Design System: |          sds           |
+|-----------------------------------------|
+| Base Web Components: |       base       |
+
+* Product A and B represent fake products for demonstration purposes.
 ```
 
 - The code required to build each SLDS component is generally extremely small.

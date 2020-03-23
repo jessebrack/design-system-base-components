@@ -21,6 +21,8 @@
 	--lwc-c-card-shadow: #0000000f 0px 1px 3px 1px;
 	--lwc-c-card-border-width: 0;
 	--lwc-c-card-title-font-size: 1.15rem;
+	--lwc-c-card-title-line-height: 1.3;
+	--lwc-c-card-title-white-space: wrap;
 	--lwc-c-card-header-spacing-vertical-end: 1rem;
 	--lwc-c-card-footer-text-align: left;
 	--lwc-c-card-footer-spacing-horizontal-start: 1.5rem;

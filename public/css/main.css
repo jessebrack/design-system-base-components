@@ -14,6 +14,22 @@
 	src: url("../fonts/SalesforceSans-Bold.ttf");
 }
 
+@font-face {
+	font-display: fallback;
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+	font-display: fallback;
+	font-family: "Open Sans";
+	font-style: bold;
+	font-weight: 700;
+	src: url("../fonts/OpenSans-Bold.ttf");
+}
+
 *,
 *:before,
 *:after {
@@ -37,10 +53,10 @@ body {
 	margin: 0 auto;
 }
 
-.subsystems .container {
+.systems {
 	display: grid;
-	grid-auto-flow: row dense;
-	grid-template-columns: 50% 50% 1fr;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	grid-gap: 1rem;
 }
 
@@ -52,7 +68,7 @@ body {
 .component-fragments ul {
 	display: grid;
 	grid-auto-flow: row dense;
-	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr) );
 	grid-column-gap: 2rem;
 	list-style: none;
 	padding: 0;
