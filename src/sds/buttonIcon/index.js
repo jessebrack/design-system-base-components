@@ -14,6 +14,7 @@ export default class SdsButtonIcon extends Button {
     return Object.assign(super[internal.defaultState], {
       variant: "bare",
       symbol: "chevrondown",
+      size: "medium"
     });
   }
 
@@ -42,8 +43,20 @@ export default class SdsButtonIcon extends Button {
     super[internal.render](changed);
 
     if (changed.variant) {
-      const computedSizeClassName = `lwc-button-icon_${this[internal.state].variant}`;
+      const computedSizeClassName = `lwc-button-icon_${
+        this[internal.state].variant
+      }`;
       this[internal.ids].inner.classList.add(computedSizeClassName);
+    }
+
+    if (changed.symbol) {
+      const icon = this[internal.ids].icon;
+      icon.symbol = this[internal.state].symbol;
+    }
+
+    if (changed.size) {
+      const icon = this[internal.ids].icon;
+      icon.boundarysize = this[internal.state].size;
     }
   }
 
@@ -54,11 +67,7 @@ export default class SdsButtonIcon extends Button {
     template.replace(
       slot,
       html`
-        <sds-icon
-          id="icon"
-          boundarysize=${this[internal.state].size}
-          symbol=${this[internal.state].symbol}
-        ></sds-icon>
+        <sds-icon id="icon"></sds-icon>
       `
     );
 

@@ -3,7 +3,7 @@ import html from "../../../node_modules/elix/src/core/html.js";
 import SdsCard from "../../sds/card/index.js";
 import SomeRandomComponent from "../../vendor/SomeRandomComponent.js";
 
-export default class TrailheadCard extends SdsCard {
+export default class TrailheadImageCard extends SdsCard {
   /**
    * Using SomeRandomComponent in an exposed part type
    * showcases a customization scenario where my component
@@ -14,7 +14,7 @@ export default class TrailheadCard extends SdsCard {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       titlePartType: "h3",
-      contentPartType: SomeRandomComponent,
+      contentPartType: SomeRandomComponent
     });
   }
 
@@ -27,13 +27,18 @@ export default class TrailheadCard extends SdsCard {
     contentPart.insertAdjacentElement("beforebegin", headerPart);
 
     /**
+     * 0. Demo Styles
      * 1. Target exposed ::part in 3rd party component
      * 2. Selector match part attribute in light DOM to expose DS specific styling API
      * 3. Custom CSS that is unique to this version of the Card
+     * 4. Custom CSS to handle footer
      */
     result.content.append(
       html`
         <style>
+          :host {
+            margin-bottom: 2rem;
+          }
           ::part(source) {
             padding: 0;
           }
@@ -45,6 +50,10 @@ export default class TrailheadCard extends SdsCard {
             border-top-right-radius: var(--lwc-c-card-radius);
             width: 100%;
           }
+          slot[name="footer"]::slotted(div) {
+            display: inline-flex;
+            --lwc-c-button-icon-spacing-horizontal-end: 0.25rem;
+          }
         </style>
       `
     );
@@ -52,4 +61,4 @@ export default class TrailheadCard extends SdsCard {
   }
 }
 
-customElements.define("th-card", TrailheadCard);
+customElements.define("th-image-card", TrailheadImageCard);

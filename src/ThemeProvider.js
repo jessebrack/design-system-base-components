@@ -5,7 +5,7 @@ import ReactiveElement from "../node_modules/elix/src/core/ReactiveElement.js";
 export default class ThemeProvider extends ReactiveElement {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
-      theme: "sds",
+      theme: "sds"
     });
   }
 
@@ -34,7 +34,6 @@ export default class ThemeProvider extends ReactiveElement {
 				<style>
 					:host {
 						display: block;
-						
           }
           ::slotted(.background) {
             padding: 2rem;

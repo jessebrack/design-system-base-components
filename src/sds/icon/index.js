@@ -6,7 +6,7 @@ class SdsIcon extends ReactiveElement {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       set: "utility",
-      symbol: "add",
+      symbol: "add"
     });
   }
 
@@ -47,14 +47,20 @@ class SdsIcon extends ReactiveElement {
     }
 
     if (changed.boundarysize) {
-      const computedSizeClassName = `lwc-icon-boundary_${this[internal.state].boundarysize}`;
+      const computedSizeClassName = `lwc-icon-boundary_${
+        this[internal.state].boundarysize
+      }`;
       this[internal.ids].boundary.classList.add(computedSizeClassName);
     }
 
     if (changed.set || changed.symbol) {
-      const computedSizeClassName = `lwc-icon-${this[internal.state].set}-${this[internal.state].symbol}`;
+      const computedSizeClassName = `lwc-icon-${this[internal.state].set}-${
+        this[internal.state].symbol
+      }`;
       this[internal.ids].icon.classList.add(computedSizeClassName);
-      const path = `/public/icons/${this[internal.state].set}/symbols.svg#${this[internal.state].symbol}`;
+      const path = `/public/icons/${this[internal.state].set}/symbols.svg#${
+        this[internal.state].symbol
+      }`;
       const useEl = this[internal.ids].icon.querySelector("use");
       useEl.setAttribute("xlink:href", path);
     }
@@ -66,7 +72,7 @@ class SdsIcon extends ReactiveElement {
         @import url("/src/sds/common/index.css");
         @import url("/src/sds/icon/index.css");
       </style>
-      <span id="boundary" class="lwc-icon-boundary">
+      <span id="boundary" class="lwc-icon-boundary" part="icon-source">
 				<span id="icon" class="lwc-icon">
 					<svg class="lwc-svg" aria-hidden="true">
 						<use xlink:href=""></use>

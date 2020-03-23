@@ -6,7 +6,10 @@
   If you need changes made, please contact the Design System team.
 */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+.lwc-menu {
+  font-size: var(--lwc-c-menu-font-size, inherit);
+}
+
 .lwc-menu-subheader{
   max-width:100%;
   overflow:hidden;
@@ -36,6 +39,7 @@
       -ms-flex-align:start;
           align-items:flex-start;
   max-width:100%;
+  font-size: inherit;
 }
 
 .lwc-menuitem__content:hover, .lwc-menuitem__content:focus, .lwc-menuitem__content:active{

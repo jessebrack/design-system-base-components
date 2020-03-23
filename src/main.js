@@ -13,10 +13,13 @@ import SdsButton from "./sds/button/index.js";
 import SdsButtonIcon from "./sds/buttonIcon/index.js";
 import SdsButtonMenu from "./sds/buttonMenu/index.js";
 import SdsDropdownList from "./sds/picklist/index.js";
+import SdsMenuItem from "./sds/menuItem/index.js";
 
 import SldsCard from "./slds/card/index.js";
 
-import TrailheadCard from "./trailhead/card/index.js";
+import TrailheadButtonIcon from "./trailhead/buttonIcon/index.js";
+import TrailheadImageCard from "./trailhead/imageCard/index.js";
+import TrailheadTrailCard from "./trailhead/trailCard/index.js";
 
 export default {
   Button,
@@ -31,6 +34,9 @@ export default {
   SdsButtonIcon,
   SdsButtonMenu,
   SdsDropdownList,
+  SdsMenuItem,
   SldsCard,
-  TrailheadCard,
+  TrailheadButtonIcon,
+  TrailheadImageCard,
+  TrailheadTrailCard
 };

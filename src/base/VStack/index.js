@@ -4,13 +4,25 @@ import ReactiveElement from "../../../node_modules/elix/src/core/ReactiveElement
 
 const Base = ReactiveElement;
 
+/**
+ * VStack was created to determine the complexity a developer
+ * would experience if a new component was introduced to the
+ * base component layer that was maybe too opinionated.
+ *
+ * VStack attempts to provide semantic structure that mimics
+ * an HTML Article Element.
+ *
+ * This component will be used to be the foundation of a Card
+ * found inside of the SDS design system.
+ */
+
 export default class VStack extends Base {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       sourcePartType: "article",
       headerPartType: "header",
       contentPartType: "div",
-      footerPartType: "footer",
+      footerPartType: "footer"
     });
   }
 

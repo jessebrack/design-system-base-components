@@ -1,7 +1,8 @@
 :host {
 	--theme-background: #e2eaf1;
+
 	/* ================
-     SDS Styling API
+     SDS Styling API (Globals)
      ================= */
 
 	/* Globals */
@@ -20,11 +21,18 @@
 	--lwc-c-card-shadow: #0000000f 0px 1px 3px 1px;
 	--lwc-c-card-border-width: 0;
 	--lwc-c-card-title-font-size: 1.15rem;
+	--lwc-c-card-header-spacing-vertical-end: 1rem;
 	--lwc-c-card-footer-text-align: left;
 	--lwc-c-card-footer-spacing-horizontal-start: 1.5rem;
 	--lwc-c-card-footer-spacing-horizontal-end: 1.5rem;
 	--lwc-c-card-footer-spacing-vertical-end: 1.5rem;
 
-	/* Trailhead Styling API */
-	--th-c-card-content-padding: 1rem 1.5rem;
+	/* ================
+     Trailhead Styling API
+		 ================= */
+
+	/* Default padding for all Trailhead Card */
+	--th-c-card-content-padding: 1.5rem;
+	/* Default border chunk for Trail Card */
+	--th-c-trail-card-color-border: #087AAA;
 }

@@ -17,9 +17,11 @@
 							<sds-theme-provider theme="slds">
 								<div class="background">
 									<slds-card title="SLDS Card Title">
-										<slds-button slot="headerActions" variant="neutral"
-											>New</slds-button
-										>
+										<sds-button-menu slot="headerActions" variant="neutral">
+											<sds-menu-item>New</sds-menu-item>
+											<sds-menu-item>Edit</sds-menu-item>
+											<sds-menu-item>Delete</sds-menu-item>
+										</sds-button-menu>
 										<img
 											id="image"
 											slot="above-content"
@@ -39,6 +41,22 @@
 											<sds-button variant="neutral">Button</sds-button>
 											<sds-button variant="brand">Button</sds-button>
 										</li>
+										<li>
+											<h4>Button Menu</h4>
+											<sds-button-menu variant="neutral">
+												<sds-menu-item>One</sds-menu-item>
+												<sds-menu-item>Two</sds-menu-item>
+												<sds-menu-item>Three</sds-menu-item>
+												<sds-menu-item>Four</sds-menu-item>
+											</sds-button-menu>
+										</li>
+										<li>
+											<h4>Card</h4>
+											<slds-card title="Card Title">
+												Content Card
+												<span slot="footer">Card Footer</span>
+											</slds-card>
+										</li>
 									</ul>
 								</div>
 							</sds-theme-provider>
@@ -49,7 +67,7 @@
 						<div class="components">
 							<sds-theme-provider theme="trailhead">
 								<div class="background">
-									<th-card title="Trailhead Card Title">
+									<th-image-card title="Trailhead Card Title">
 										<img
 											id="image"
 											slot="above-content"
@@ -58,8 +76,18 @@
 										/>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
 										eget velit placerat, scelerisque libero sed, mattis orci.
-										<sds-button slot="footer" variant="neutral">Learn More</sds-button>
-									</th-card>
+										<div slot="footer">
+											<sds-button variant="neutral">Learn More</sds-button>
+										</div>
+									</th-image-card>
+									<th-trail-card title="Build Lightning Web Components">
+										Develop reusable Lightning web components using JavaScript and HTML.
+										<div slot="footer">
+											<th-button-icon symbol="add"></th-button-icon>
+											<th-button-icon symbol="favorite"></th-button-icon>
+											<th-button-icon symbol="quote"></th-button-icon>
+										</div>
+									</th-trail-card>
 								</div>
 								<div class="component-fragments">
 									<ul>
@@ -101,18 +129,18 @@
 							<li>
 								<h4>Button Menu</h4>
 								<sds-button-menu variant="neutral">
-									<div>One</div>
-									<div>Two</div>
-									<div>Three</div>
-									<div>Four</div>
+									<sds-menu-item>One</sds-menu-item>
+									<sds-menu-item>Two</sds-menu-item>
+									<sds-menu-item>Three</sds-menu-item>
+									<sds-menu-item>Four</sds-menu-item>
 								</sds-button-menu>
 							</li>
 							<li>
 								<h4>Picklist</h4>
 								<sds-picklist variant="neutral" aria-label="Skill level">
-									<div>Beginner</div>
-									<div>Intermediate</div>
-									<div>Expert</div>
+									<sds-menu-item>Beginner</sds-menu-item>
+									<sds-menu-item>Intermediate</sds-menu-item>
+									<sds-menu-item>Expert</sds-menu-item>
 								</sds-picklist>
 							</li>
 							<li class="large">

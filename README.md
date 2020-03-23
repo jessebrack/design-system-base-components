@@ -46,14 +46,16 @@ This project requires little to no dependencies. The primitive layers requires E
 
 - Each folder contains a namespace of components.
 
-  Each namespace
+  Though not illustrated in the folder structure, **base** is the foundational base web components layer (all of Elix plus a new component). Then the **sds** namespace is applied on top of the base layer. Then **slds** and **trailhead** use the Syling API and template patching to create their respective namespaced components.
+
 ```
-├── base
-├── sds
-├── slds
-├── trailhead
-└── vendor
+| Subsystems: | slds | trailhead |
+|--------------------------------|
+| Design System: |      sds      |
+|--------------------------------|
+| Base Web Components:  |  base  |
 ```
+
 - The code required to build each SLDS component is generally extremely small.
 
 - Each SLDS web components starts by subclassing an existing Elix component class. The Elix base class takes care of nearly all the details of structural presentation (positioning a menu with regard to a button, say), interactions, and basics such as accessibility.
@@ -61,6 +63,8 @@ This project requires little to no dependencies. The primitive layers requires E
 - Many of these SLDS component subclasses patch their base class template in order to bake in custom styling. See [Template Patching](https://component.kitchen/elix/customizing#template-patching) for details.
 
 - Most of the component subclasses also dynamically [replace element parts](https://component.kitchen/elix/customizing#replaceable-element-parts) in the component's shadow. E.g., the SldsCarousel component indicates that, instead of using a standard Elix PageDot component for each of the little dots (called a "proxy"), the component should instead use a custom SLDSPageDot component for the dots instead.
+
+- In many situations, a theme being applied to the Styling API provided by the SDS layer is sufficient to achieve visual brand expression. Those components are still in the sds namespace for the custom element. Unless functionality or structure needs to be forked, a new namespace is not created.
 
 ### Caveats:
 

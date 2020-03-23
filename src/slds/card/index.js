@@ -4,10 +4,15 @@ import * as template from "../../../node_modules/elix/src/core/template.js";
 import SdsCard from "../../sds/card/index.js";
 import SdsIcon from "../../sds/icon/index.js";
 
+/**
+ * Lazy attempt to accept new HTML for footer
+ */
 const footer = () => {
   return template.html`
 		<footer class="lwc-card__footer">
-      <a class="lwc-card__footer-action" href="javascript:void(0);">View All</a>
+      <a class="lwc-card__footer-action" href="javascript:void(0);">
+        <slot name="footer">View All</slot>
+      </a>
 		</footer>
 	`;
 };
@@ -17,7 +22,7 @@ export default class SldsCard extends SdsCard {
     return Object.assign(super[internal.defaultState], {
       titlePartType: "h3",
       iconPartType: SdsIcon,
-      footerPartType: footer(),
+      footerPartType: footer()
     });
   }
 

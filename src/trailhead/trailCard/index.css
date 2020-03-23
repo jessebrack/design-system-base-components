@@ -1,0 +1,29 @@
+
+
+.lwc-card {
+  /* Expose new property for Trailhead Trail Card */
+  border-top: 0.5rem solid var(--th-c-trail-card-color-border,#585858);
+  /* Re-assign property values from SDS Styling API to the context of Trail Card */
+  --lwc-c-card-header-spacing-vertical-start: 0;
+  --lwc-c-card-header-spacing-vertical-end: 0;
+  --lwc-c-card-header-spacing-horizontal-start: 1.5rem;
+  --lwc-c-card-header-spacing-horizontal-end: 1.5rem;
+}
+
+.lwc-card__body {
+  /* Use existing Trailhead Styling API */
+  padding: var(--th-c-card-content-padding);
+}
+
+/* ======================
+  Custom Trailhead CSS
+  ======================= */
+
+/* Custom Trail Card Image */
+.trail-image {
+  width: 90px;
+  height: 90px;
+  background: var(--th-c-trail-card-color-border);
+  margin: var(--th-c-card-content-padding);
+  border-radius: 4px;
+}

@@ -1,7 +1,7 @@
 import * as internal from "../../../node_modules/elix/src/base/internal.js";
 import DropdownList from "../../../node_modules/elix/src/base/DropdownList.js";
 import SdsButton from "../button/index.js";
-import SldsMenu from "../menu/index.js";
+import SdsMenu from "../menu/index.js";
 import SdsPopup from "../popup/index.js";
 import SdsIcon from "../icon/index.js";
 
@@ -12,10 +12,10 @@ export default class SdsDropdownList extends DropdownList {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       horizontalAlign: "stretch",
-      menuPartType: SldsMenu,
+      menuPartType: SdsMenu,
       popupPartType: SdsPopup,
       popupTogglePartType: SdsIcon,
-      sourcePartType: SdsButton,
+      sourcePartType: SdsButton
     });
   }
 
@@ -42,7 +42,7 @@ export default class SdsDropdownList extends DropdownList {
 
   get [internal.template]() {
     const result = super[internal.template];
-    console.log(result);
+    // console.log(result);
     // const icon = result.content.getElementById('source');
     // console.log(icon)
     // if (icon) {
