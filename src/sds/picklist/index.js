@@ -42,7 +42,7 @@ export default class SdsDropdownList extends DropdownList {
 
   get [internal.template]() {
     const result = super[internal.template];
-
+    console.log(result);
     // const icon = result.content.getElementById('source');
     // console.log(icon)
     // if (icon) {

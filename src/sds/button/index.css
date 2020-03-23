@@ -18,10 +18,11 @@
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	font-size: inherit;
+	font-size: var(--lwc-c-button-font-size, inherit);
+	font-weight: var(--lwc-c-button-font-weight, normal);
 	line-height: inherit;
 	position: relative;
-	padding: 0;
+	padding: var(--lwc-c-button-padding, 0);
 	text-align: inherit;
 	text-decoration: none;
 	-webkit-user-select: none;
@@ -115,6 +116,7 @@
 	--lwc-c-button-color-background-disabled: #c9c7c5;
 	--lwc-c-button-color-border-disabled: #c9c7c5;
 	--lwc-c-button-color-text-disabled: white;
+	--lwc-c-button-shadow: var(--lwc-c-button-brand-shadow);
 }
 .lwc-button_brand-outline {
 	padding-left: 1rem;
@@ -261,6 +263,7 @@
 	);
 	--lwc-c-button-color-background-disabled: white;
 	--lwc-c-button-color-border-disabled: #dddbda;
+	--lwc-c-button-shadow: var(--lwc-c-button-neutral-shadow);
 	--lwc-c-icon-color: var(--lwc-brand-accessible, #0070d2);
 	--lwc-c-icon-size: 0.75rem;
 }

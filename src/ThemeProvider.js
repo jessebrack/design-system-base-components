@@ -34,9 +34,12 @@ export default class ThemeProvider extends ReactiveElement {
 				<style>
 					:host {
 						display: block;
-						padding: 2rem;
+						
+          }
+          ::slotted(.background) {
+            padding: 2rem;
 						background: var(--theme-background);
-					}
+          }
 				</style>
 				<slot></slot>
 			`;

@@ -1,5 +1,6 @@
 import * as internal from "../../../node_modules/elix/src/base/internal.js";
 import html from "../../../node_modules/elix/src/core/html.js";
+import * as template from "../../../node_modules/elix/src/core/template.js";
 import OverlayFrame from "../../../node_modules/elix/src/base/OverlayFrame.js";
 
 /**
@@ -11,21 +12,19 @@ import OverlayFrame from "../../../node_modules/elix/src/base/OverlayFrame.js";
 export default class SldsOverlayFrame extends OverlayFrame {
   get [internal.template]() {
     const result = super[internal.template];
+    const slot = result.content.querySelector("slot:not([name])");
+    const wrapper = html`
+      <div class="lwc-dropdown-container">
+        <slot></slot>
+      </div>
+    `;
+    template.replace(slot, wrapper);
+
     result.content.append(
       html`
         <style>
-          /* slds-dropdown */
-          :host {
-            background: white;
-            min-width: 6rem;
-            max-width: 20rem;
-            border: 1px solid #dddbda;
-            border-radius: 0.25rem;
-            padding: 0.25rem 0;
-            font-size: 0.75rem;
-            background: #fff;
-            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
-          }
+          @import url("/src/sds/common/index.css");
+          @import url("/src/sds/overlayFrame/index.css");
         </style>
       `
     );
