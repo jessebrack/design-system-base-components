@@ -12,6 +12,7 @@
 	line-height: 1.5;
 	font-family: var(--lwc-font-family, inherit);
 	font-size: var(--lwc-font-size, 1rem);
+	color: var(--lwc-color-text, #080707);
 }
 
 :host:not(:has(slot:has-assigned)) {

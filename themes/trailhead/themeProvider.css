@@ -7,7 +7,9 @@
 
 	/* Globals */
 	--lwc-font-family: "Salesforce Sans", Arial, sans-serif;
+	--lwc-brand-accessible: #0070d2;
 
+	/* Button Component */
 	--lwc-c-button-line-height: 1.25;
 	--lwc-c-button-padding: 0.625rem 1rem;
 	--lwc-c-button-font-size: .875rem;
