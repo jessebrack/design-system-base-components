@@ -2,6 +2,8 @@
 
 > This repository is a fork of https://github.com/JanMiksovsky/lightning-factor. Original demo published at https://janmiksovsky.github.io/lightning-factor.
 
+Demo: https://pensive-almeida-f443ce.netlify.com/
+
 This repository explores the possibility of implementing web components for the Salesforce Lightning Design System (SLDS) on top of a generic component library that was designed to be themed and extended. The particular component library used for this experiment is [Elix](https://component.kitchen/elix), which was expressly designed for such a purpose.
 
 In addition, this fork tries to highlight real-world customization scenarios seen on the Salesforce Platform. With that in mind, these examples try to highlight minimal customizations (changing brand colors) to extreme customizations (modifying HTML templates/extending APIs).
