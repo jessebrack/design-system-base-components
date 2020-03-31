@@ -30,12 +30,16 @@ This project requires little to no dependencies. The primitive layers requires E
 
 ### Things to try:
 
-* Build a component with:
-  * SLDS v2 with Styling API
-  * Salesforce Design System, Styling API with sensible defaults (a11y)
-  * another OS design system (material)
-  * Internal customer (www/Trailhead, will confirm system of systems concept)
-  * External customer’s Design System (Disney)
+1. Build a net new component for Base Web Components that can be used by other Design Systems.
+2. Use new Base Web Component to extend into the Salesforce Design System Layer and build another net new component that inherits the template and APIs from the Super Class.
+3. Apply the Styling API and extend component to expose SDS specific APIs
+4. Extend net new SDS Web Component to highlight real world use by a customer: 
+    1. Layers
+        1. Salesforce Lightning Design System
+        2. Internal customer (Trailhead) 
+        3. External customer (CodeScience)
+        4. External customer (Disney)
+    2. 3rd party open source Design System (Carbon - IBMs Design System) 
 
 
 - Open the button menu component at the top of the demo page using both standard UI methods of selecting a menu item with the mouse. First method: click on the button to open the menu, and click a second time on the desired menu item. Second method: mouse down on the menu button, drag into the menu while holding the mouse button down, then release the mouse over the desired menu item. See this [blog post](https://component.kitchen/blog/posts/building-a-great-menu-component-is-so-much-trickier-than-youd-think) on these techniques and other subtleties of menu interaction. On desktop, both techniques are critical to achieve the fluid interactivity of native desktop menus bars. The existing lightning-button-menu base component only supports the two-click method, and hence lacks full parity with desktop menus.
@@ -51,15 +55,12 @@ This project requires little to no dependencies. The primitive layers requires E
   Though not illustrated in the folder structure, **base** is the foundational base web components layer (all of Elix plus a new component). Then the **sds** namespace is applied on top of the base layer. Then **slds** and **trailhead** use the Syling API and template patching to create their respective namespaced components.
 
 ```
-| Products:   |  A  |  B  |   trailhead   |
 |-----------------------------------------|
-| Subsystems: |    slds   |   trailhead   |
+| Layer: | slds | trailhead | CodeScience |
 |-----------------------------------------|
 | Design System: |          sds           |
 |-----------------------------------------|
 | Base Web Components: |       base       |
-
-* Product A and B represent fake products for demonstration purposes.
 ```
 
 - The code required to build each SLDS component is generally extremely small.
