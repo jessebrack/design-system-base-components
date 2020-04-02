@@ -1,0 +1,59 @@
+
+:host {
+  --color-dark-0: #000;
+  --color-dark-1: #1F242B;
+  --color-dark-2: #32363D;
+  --color-dark-3: #393e46;
+  --color-dark-4: #000;
+  --color-dark-5: #000;
+  --color-dark-6: #000;
+  --color-dark-7: #000;
+  --color-dark-8: #000;
+  --color-dark-9: #000;
+  --color-dark-10: #000;
+  --color-dark-11: #fff;
+
+  /* ====
+		App Styles
+		===== */
+	--theme-background: var(--color-dark-1);
+
+	/* ================
+		SDS Styling API (Globals)
+		================= */
+
+	/* Globals */
+  --lwc-color-text: #fff;
+  --lwc-color-accessible: #fff;
+  --lwc-color-accessible-active: #eee;
+  --lwc-brand-accessible: var(--lwc-color-accessible);
+  --lwc-link-text-decoration: underline;
+
+	/* ================
+		SDS Styling API (Components)
+		================= */
+
+  --lwc-c-button-neutral-color-background: var(--color-dark-3);
+  --lwc-c-button-neutral-color-border: var(--color-dark-0);
+  --lwc-c-button-neutral-color-background-active: var(--color-dark-1);
+  --lwc-c-button-neutral-color-border-active: var(--lwc-c-button-neutral-color-border);
+  --lwc-c-button-neutral-color-text: var(--color-dark-11);
+
+  --lwc-c-button-brand-color-background: #2374F3;
+
+  --lwc-c-button-icon-neutral-color-background: var(--lwc-c-button-neutral-color-background);
+  --lwc-c-button-icon-neutral-color-border: var(--lwc-c-button-neutral-color-border);
+  --lwc-c-button-icon-neutral-color-background-active: var(--color-dark-0);
+  --lwc-c-button-icon-neutral-color-border-active: var(--lwc-c-button-icon-neutral-color-background-active);
+  --lwc-c-button-icon-color: var(--color-dark-11);
+
+  --lwc-c-card-color-background: var(--color-dark-2);
+  --lwc-c-card-color-border: var(--color-dark-0);
+  --lwc-c-card-footer-color-border: var(--lwc-c-card-color-border);
+
+  --lwc-c-dropdown-container-color-background: var(--color-dark-2);
+  --lwc-c-dropdown-container-border-color: var(--color-dark-0);
+
+  --lwc-c-menu-item-color: var(--lwc-color-text);
+  --lwc-c-menuitem-color-background-active: var(--color-dark-1);
+}

@@ -1,9 +1,12 @@
 :host {
+  /* ====
+		App Styles
+		===== */
 	--theme-background: #F5F6F9;
 
 	/* ================
-     SDS Styling API (Globals)
-     ================= */
+    SDS Styling API (Globals)
+    ================= */
 
   /* Globals */
   --lwc-brand-accessible: #2374F3;
@@ -25,9 +28,8 @@
   --lwc-c-card-padding: 0;
   --lwc-c-card-radius: 4px;
   --lwc-c-card-font-size: 0.825rem;
-
   --lwc-c-card-header-spacing-vertical-end: 1rem;
-
+  --lwc-c-card-footer-border-width: 0;
   --lwc-c-card-footer-text-align: left;
   --lwc-c-card-footer-spacing-horizontal-start: 1.5rem;
 	--lwc-c-card-footer-spacing-horizontal-end: 1.5rem;

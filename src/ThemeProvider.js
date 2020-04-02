@@ -20,23 +20,18 @@ export default class ThemeProvider extends ReactiveElement {
   [internal.render](changed) {
     super[internal.render](changed);
 
-    if (changed.system && !changed.theme) {
-      console.log(this[internal.state].system);
+    if (this.system) {
+      let imports;
       const style = template.createElement("style");
-      style.textContent = `
-				@import url("../themes/${this[internal.state].system}/themeProvider.css");
-			`;
       template.replace(this[internal.ids].import, style);
-    }
-
-    if (changed.system && changed.theme) {
-      console.log(this[internal.state].theme);
-      const style = template.createElement("style");
-      style.textContent = `
-      @import url("../themes/${this[internal.state].system}/themeProvider.css");
-      @import url("../themes/${this[internal.state].theme}/themeProvider.css");
-			`;
-      template.replace(this[internal.ids].import, style);
+      imports = `@import url("../layers/${this.system}/themeProvider.css")`;
+      if (this.system && changed.theme && this.theme !== null) {
+        imports = [
+          `@import url("../layers/${this.system}/themeProvider.css");`,
+          `@import url("../themes/${this.theme}/themeProvider.css");`
+        ].join("\n");
+      }
+      style.textContent = imports;
     }
   }
 

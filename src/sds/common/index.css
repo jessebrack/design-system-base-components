@@ -269,6 +269,10 @@ ul {
 	list-style: none;
 }
 
+a:link {
+	text-decoration: var(--lwc-link-text-decoration, none);
+}
+
 a:hover,
 a:focus {
 	text-decoration: underline;

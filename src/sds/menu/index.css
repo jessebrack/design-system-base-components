@@ -30,7 +30,7 @@
 }
 .lwc-menuitem__content{
   padding:0.5rem 0.75rem;
-  color:#080707;
+  color:var(--lwc-c-menu-item-color,#080707);
   cursor:pointer;
   display:-webkit-box;
   display:-ms-flexbox;
@@ -49,7 +49,7 @@
 .lwc-menuitem__content:hover, .lwc-menuitem__content:focus{
   outline:0;
   text-decoration:none;
-  background-color:var(--lwc-c-menuitem-color-background-hover, #f3f2f2);
+  background-color:var(--lwc-c-menuitem-color-background-active, #f3f2f2);
 }
 
 .lwc-menuitem__content:active{

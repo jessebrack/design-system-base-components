@@ -100,13 +100,15 @@ export default class VStack extends Base {
 
 			<article id="source" part="source">
         <header id="header"></header>
-				<div id="content" part="content">
+
+        <div id="content" part="content">
 					<slot name="above-content"></slot>
 					<div id="inner-content" part="inner">
           	<slot></slot>
 					</div>
 					<slot name="below-content"></slot>
         </div>
+
 		    <footer id="footer"></footer>
 		  </article>
 		`;

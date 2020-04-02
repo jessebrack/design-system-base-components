@@ -253,6 +253,10 @@
 		--lwc-c-button-neutral-color-text,
 		var(--lwc-brand-accessible, inherit)
 	);
+	--lwc-c-button-color-text-active: var(
+		--lwc-c-button-neutral-color-text-active,
+		var(--lwc-brand-accessible-active, inherit)
+	)
 	--lwc-c-button-color-background-active: var(
 		--lwc-c-button-neutral-color-background-active,
 		#fafaf9

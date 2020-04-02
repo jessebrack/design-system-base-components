@@ -20,7 +20,7 @@
   border-radius:0.25rem;
   padding:0.25rem 0;
   font-size:0.75rem;
-  background:white;
+  background:var(--lwc-c-dropdown-container-color-background, white);
   -webkit-box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.16);
           box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.16);
 }

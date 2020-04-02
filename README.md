@@ -27,20 +27,21 @@ This project requires little to no dependencies. The primitive layers requires E
 - `Node ^8.x` for a static web server to load ES modules.
 - `Elix` for customizable authored web components.
 
+### Things to build:
+
+1. ✅ Build a net new component for Base Web Components that can be used by other Design Systems.
+2. ✅ Use new Base Web Component to extend into the Salesforce Design System Layer and build another net new component that inherits the template and APIs from the Super Class.
+3. ✅ Apply the Styling API and extend component to expose SDS specific APIs
+4. Extend net new SDS Web Component to highlight real world use by a customer:
+    - Layers
+      - ✅ Salesforce Lightning Design System
+      - ✅ Internal customer (Trailhead)
+      - ✅ External customer (CodeScience)
+      - External customer (Disney)
+    - 3rd party open source Design System (Carbon - IBMs Design System)
+5. ✅ Apply Dark Mode toggle
 
 ### Things to try:
-
-1. Build a net new component for Base Web Components that can be used by other Design Systems.
-2. Use new Base Web Component to extend into the Salesforce Design System Layer and build another net new component that inherits the template and APIs from the Super Class.
-3. Apply the Styling API and extend component to expose SDS specific APIs
-4. Extend net new SDS Web Component to highlight real world use by a customer: 
-    1. Layers
-        1. Salesforce Lightning Design System
-        2. Internal customer (Trailhead) 
-        3. External customer (CodeScience)
-        4. External customer (Disney)
-    2. 3rd party open source Design System (Carbon - IBMs Design System) 
-
 
 - Open the button menu component at the top of the demo page using both standard UI methods of selecting a menu item with the mouse. First method: click on the button to open the menu, and click a second time on the desired menu item. Second method: mouse down on the menu button, drag into the menu while holding the mouse button down, then release the mouse over the desired menu item. See this [blog post](https://component.kitchen/blog/posts/building-a-great-menu-component-is-so-much-trickier-than-youd-think) on these techniques and other subtleties of menu interaction. On desktop, both techniques are critical to achieve the fluid interactivity of native desktop menus bars. The existing lightning-button-menu base component only supports the two-click method, and hence lacks full parity with desktop menus.
 
@@ -55,23 +56,25 @@ This project requires little to no dependencies. The primitive layers requires E
   Though not illustrated in the folder structure, **base** is the foundational base web components layer (all of Elix plus a new component). Then the **sds** namespace is applied on top of the base layer. Then **slds** and **trailhead** use the Syling API and template patching to create their respective namespaced components.
 
 ```
-|-----------------------------------------|
-| Layer: | slds | trailhead | CodeScience |
-|-----------------------------------------|
-| Design System: |          sds           |
-|-----------------------------------------|
-| Base Web Components: |       base       |
+| Theme: |           Dark Mode             |
+|------------------------------------------|
+| Layers: | slds | trailhead | CodeScience |
+|------------------------------------------|
+| Design System: |          sds            |
+|------------------------------------------|
+| Base Web Components: |       base        |
 ```
 
-- The code required to build each SLDS component is generally extremely small.
+- The code required to build each SDS components + Layer components is generally extremely small.
 
-- Each SLDS web components starts by subclassing an existing Elix component class. The Elix base class takes care of nearly all the details of structural presentation (positioning a menu with regard to a button, say), interactions, and basics such as accessibility.
+- Each SDS web components starts by subclassing an existing Elix component class. The Elix base class takes care of nearly all the details of structural presentation (positioning a menu with regard to a button, say), interactions, and basics such as accessibility.
 
-- Many of these SLDS component subclasses patch their base class template in order to bake in custom styling. See [Template Patching](https://component.kitchen/elix/customizing#template-patching) for details.
+- Many of these SDS component subclasses patch their base class template in order to bake in custom styling. See [Template Patching](https://component.kitchen/elix/customizing#template-patching) for details.
 
 - Most of the component subclasses also dynamically [replace element parts](https://component.kitchen/elix/customizing#replaceable-element-parts) in the component's shadow. E.g., the SldsCarousel component indicates that, instead of using a standard Elix PageDot component for each of the little dots (called a "proxy"), the component should instead use a custom SLDSPageDot component for the dots instead.
 
 - In many situations, a theme being applied to the Styling API provided by the SDS layer is sufficient to achieve visual brand expression. Those components are still in the sds namespace for the custom element. Unless functionality or structure needs to be forked, a new namespace is not created.
+  - This is how the dark mode is represented. Though my suggestion would be to create a mixin that a component can use to embed dark mode functionality into the component, rather then relying on a contextual theme attributes.
 
 ### Caveats:
 

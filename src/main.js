@@ -3,6 +3,7 @@ import BorderButton from "../node_modules/elix/define/BorderButton.js";
 import MenuButton from "../node_modules/elix/define/MenuButton.js";
 import DropdownList from "../node_modules/elix/define/DropdownList.js";
 
+import ColorModeToggle from "../app/colorMode/index.js";
 import ThemeProvider from "./ThemeProvider.js";
 
 import VStack from "./base/VStack/index.js";
@@ -28,6 +29,7 @@ export default {
   BorderButton,
   MenuButton,
   DropdownList,
+  ColorModeToggle,
   ThemeProvider,
   VStack,
   SdsCard,

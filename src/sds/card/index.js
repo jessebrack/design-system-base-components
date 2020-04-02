@@ -32,7 +32,7 @@ export default class SdsCard extends VStack {
     return Object.assign(super[internal.defaultState], {
       headerPartType: header("Card Title"),
       titlePartType: "h2",
-      footerPartType: footer(),
+      footerPartType: footer()
     });
   }
 
