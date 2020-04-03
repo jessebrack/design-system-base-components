@@ -6,23 +6,21 @@ import SdsCard from "../../sds/card/index.js";
 /**
  * Lazy attempt to accept new HTML for image
  */
-const trailImage = () => {
-  return template.html`
-    <div class="trail-image">
-      <img src="/public/images/trail.png" alt="" width="90" />
-    </div>
-  `;
-};
+const trailImage = template.html`
+  <div class="trail-image">
+    <img src="/public/images/trail.png" alt="" width="90" />
+  </div>
+`;
 
 export default class TrailheadTrailCard extends SdsCard {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
-      imagePartType: trailImage()
+      imagePartType: trailImage
     });
   }
 
   get image() {
-    return this[internal.state].image;
+    return this.image;
   }
   set image(image) {
     this[internal.setState]({ image });
@@ -30,9 +28,6 @@ export default class TrailheadTrailCard extends SdsCard {
 
   [internal.render](changed) {
     super[internal.render](changed);
-    if (changed.image) {
-      console.log("image changed");
-    }
 
     if (changed.imagePartType) {
       template.transmute(

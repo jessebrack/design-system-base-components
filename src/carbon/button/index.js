@@ -11,7 +11,7 @@ export default class CarbonButton extends Button {
    * display depending on the action a user is taking
    */
   get variant() {
-    return this[internal.state].variant;
+    return this.variant;
   }
   set variant(variant) {
     this[internal.setState]({ variant });

@@ -1,16 +1,14 @@
 import * as internal from "../../../node_modules/elix/src/base/internal.js";
 import Popup from "../../../node_modules/elix/src/base/Popup.js";
-import SldsOverlayFrame from "../overlayFrame/index.js";
+import SdsOverlayFrame from "../overlayFrame/index.js";
 
 /**
- * SLDS variation of an Elix [Popup](https://component.kitchen/elix/Popup).
+ * SDS variation of an Elix [Popup](https://component.kitchen/elix/Popup).
  */
 export default class SdsPopup extends Popup {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
-      framePartType: SldsOverlayFrame,
+      framePartType: SdsOverlayFrame
     });
   }
 }
-
-customElements.define("sds-popup", SdsPopup);

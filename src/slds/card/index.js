@@ -7,22 +7,20 @@ import SdsIcon from "../../sds/icon/index.js";
 /**
  * Lazy attempt to accept new HTML for footer
  */
-const footer = () => {
-  return template.html`
-		<footer class="lwc-card__footer">
-      <a class="lwc-card__footer-action" href="javascript:void(0);">
-        <slot name="footer">View All</slot>
-      </a>
-		</footer>
-	`;
-};
+const footer = template.html`
+  <footer class="lwc-card__footer">
+    <a class="lwc-card__footer-action" href="javascript:void(0);">
+      <slot name="footer">View All</slot>
+    </a>
+  </footer>
+`;
 
 export default class SldsCard extends SdsCard {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       titlePartType: "h3",
       iconPartType: SdsIcon,
-      footerPartType: footer()
+      footerPartType: footer
     });
   }
 
@@ -30,7 +28,7 @@ export default class SldsCard extends SdsCard {
     super[internal.render](changed);
 
     if (changed.iconPartType) {
-      // Pass attributes to SldsIcon component
+      // Pass attributes to SdsIcon component
       this[internal.ids].headerIcon.set = "standard";
       this[internal.ids].headerIcon.symbol = "account";
     }
@@ -38,7 +36,10 @@ export default class SldsCard extends SdsCard {
 
   get [internal.template]() {
     const result = super[internal.template];
-
+    /**
+     * [part="inner"] css was to see if exposing a new styling api
+     * for a subsystem is an optimal approach. I'm indifferent.
+     */
     result.content.append(
       html`
         <style>

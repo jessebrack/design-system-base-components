@@ -11,28 +11,28 @@ class SdsIcon extends ReactiveElement {
   }
 
   get size() {
-    return this[internal.state].size;
+    return this.size;
   }
   set size(size) {
     this[internal.setState]({ size });
   }
 
   get boundarysize() {
-    return this[internal.state].boundarysize;
+    return this.boundarysize;
   }
   set boundarysize(boundarysize) {
     this[internal.setState]({ boundarysize });
   }
 
   get set() {
-    return this[internal.state].set;
+    return this.set;
   }
   set set(set) {
     this[internal.setState]({ set });
   }
 
   get symbol() {
-    return this[internal.state].symbol;
+    return this.symbol;
   }
   set symbol(symbol) {
     this[internal.setState]({ symbol });

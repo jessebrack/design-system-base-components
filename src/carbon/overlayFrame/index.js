@@ -9,6 +9,9 @@ import OverlayFrame from "../../../node_modules/elix/src/base/OverlayFrame.js";
 export default class CarbonOverlayFrame extends OverlayFrame {
   get [internal.template]() {
     const result = super[internal.template];
+    /**
+     * Take existing slot and wrap it in HTMLElement with class
+     */
     const slot = result.content.querySelector("slot:not([name])");
     const wrapper = html`
       <div class="bx--dropdown-list">

@@ -3,55 +3,51 @@ import * as template from "../../../node_modules/elix/src/core/template.js";
 import html from "../../../node_modules/elix/src/core/html.js";
 import VStack from "../../base/VStack/index.js";
 
-const header = title => {
-  return template.html`
-		<div class="lwc-card__header">
-      <header>
-        <slot name="headerIcon" id="headerIcon" class="lwc-card__header-figure"></slot>
+const header = template.html`
+  <div class="lwc-card__header">
+    <header>
+      <slot name="headerIcon" id="headerIcon" class="lwc-card__header-figure"></slot>
 
-				<h2 class="lwc-card__header-title">
-					<span id="headerTitle">${title}</span>
-        </h2>
+      <h2 class="lwc-card__header-title">
+        <span id="headerTitle">Card Title</span>
+      </h2>
 
-        <slot name="headerActions" id="headerActions" class="lwc-card__header-actions"></slot>
-			</header>
-		</div>
-	`;
-};
+      <slot name="headerActions" id="headerActions" class="lwc-card__header-actions"></slot>
+    </header>
+  </div>
+`;
 
-const footer = () => {
-  return template.html`
-		<footer class="lwc-card__footer">
-      <slot name="footer"></slot>
-		</footer>
-	`;
-};
+const footer = template.html`
+  <footer class="lwc-card__footer">
+    <slot name="footer"></slot>
+  </footer>
+`;
 
 export default class SdsCard extends VStack {
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
-      headerPartType: header("Card Title"),
+      headerPartType: header,
       titlePartType: "h2",
-      footerPartType: footer()
+      footerPartType: footer
     });
   }
 
   get title() {
-    return this[internal.state].title;
+    return this.title;
   }
   set title(title) {
     this[internal.setState]({ title });
   }
 
   get iconPartType() {
-    return this[internal.state].iconPartType;
+    return this.iconPartType;
   }
   set iconPartType(iconPartType) {
     this[internal.setState]({ iconPartType });
   }
 
   get actionsPartType() {
-    return this[internal.state].actionsPartType;
+    return this.actionsPartType;
   }
   set actionsPartType(actionsPartType) {
     this[internal.setState]({ actionsPartType });

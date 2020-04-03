@@ -8,15 +8,17 @@
 
 	<body>
 		<main>
-			<header>
-				<color-mode-toggle></color-mode-toggle>
+			<header class="header">
+				<div class="container">
+					<color-mode-toggle></color-mode-toggle>
+				</div>
 			</header>
 			<main>
 				<section class="subsystems">
 					<div class="container">
-						<h3>Subsystems</h3>
+						<h3>Design System Layers</h3>
 						<div class="systems">
-							<div class="system">
+							<div class="layer">
 								<h4>Product (LEX)</h4>
 								<div class="components">
 									<sds-theme-provider system="slds">
@@ -40,7 +42,7 @@
 									</sds-theme-provider>
 								</div>
 							</div>
-							<div class="system">
+							<div class="layer">
 								<h4>Trailhead</h4>
 								<div class="components">
 									<sds-theme-provider system="trailhead">
@@ -70,7 +72,7 @@
 									</sds-theme-provider>
 								</div>
 							</div>
-							<div class="system">
+							<div class="layer">
 								<h4>CodeScience</h4>
 								<div class="components">
 									<sds-theme-provider system="code-science">
@@ -99,8 +101,9 @@
 
 				<section class="system">
 					<div class="container">
+						<h3>Design System</h3>
 						<div class="sds">
-							<h3>Salesforce Design System (Styling API)</h3>
+							<h4>Salesforce Design System Base (Styling API)</h4>
 							<div class="component-fragments">
 								<ul>
 									<li>
@@ -110,7 +113,7 @@
 										<sds-button variant="brand-outline">Button</sds-button>
 										<sds-button>Text Button</sds-button>
 									</li>
-									<li>
+									<li class="span-full">
 										<h4>Icons</h4>
 										<sds-icon boundarysize="small"></sds-icon>
 										<sds-icon set="standard" symbol="opportunity"></sds-icon>
@@ -137,7 +140,7 @@
 											<sds-menu-item>Expert</sds-menu-item>
 										</sds-picklist>
 									</li>
-									<li class="large">
+									<li class="span-full">
 										<h4>Card</h4>
 										<sds-card title="Card Title">
 											Content Card
@@ -148,7 +151,7 @@
 							</div>
 						</div>
 						<div class="carbon">
-							<h3>IBM Carbon Design System</h3>
+							<h4>IBM Carbon Design System</h4>
 							<div class="component-fragments">
 								<ul>
 									<li>

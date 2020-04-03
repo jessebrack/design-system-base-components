@@ -7,9 +7,6 @@ import html from "../../../node_modules/elix/src/core/html.js";
  * SLDS variation of an Elix [Button](https://component.kitchen/elix/Button).
  */
 export default class SdsButtonIcon extends Button {
-  [internal.componentDidMount]() {
-    this[internal.ids].inner.classList.add("lwc-button-icon");
-  }
   get [internal.defaultState]() {
     return Object.assign(super[internal.defaultState], {
       variant: "bare",
@@ -19,21 +16,21 @@ export default class SdsButtonIcon extends Button {
   }
 
   get variant() {
-    return this[internal.state].variant;
+    return this.variant;
   }
   set variant(variant) {
     this[internal.setState]({ variant });
   }
 
   get size() {
-    return this[internal.state].size;
+    return this.size;
   }
   set size(size) {
     this[internal.setState]({ size });
   }
 
   get symbol() {
-    return this[internal.state].symbol;
+    return this.symbol;
   }
   set symbol(symbol) {
     this[internal.setState]({ symbol });
@@ -41,11 +38,13 @@ export default class SdsButtonIcon extends Button {
 
   [internal.render](changed) {
     super[internal.render](changed);
-
+    // Add base class at firstRender
+    if (this[internal.firstRender]) {
+      this[internal.ids].inner.classList.add("lwc-button-icon");
+    }
     if (changed.variant) {
-      const computedSizeClassName = `lwc-button-icon_${
-        this[internal.state].variant
-      }`;
+      const variant = this[internal.state].variant;
+      const computedSizeClassName = `lwc-button-icon_${variant}`;
       this[internal.ids].inner.classList.add(computedSizeClassName);
     }
 
@@ -56,7 +55,8 @@ export default class SdsButtonIcon extends Button {
 
     if (changed.size) {
       const icon = this[internal.ids].icon;
-      icon.boundarysize = this[internal.state].size;
+      const size = this[internal.state].size;
+      icon.boundarysize = size;
     }
   }
 
