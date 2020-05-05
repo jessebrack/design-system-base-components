@@ -1,142 +1,142 @@
 @font-face {
-	font-display: fallback;
-	font-family: "Salesforce Sans";
-	font-style: normal;
-	font-weight: 400;
-	src: url("../fonts/SalesforceSans-Regular.ttf");
+  font-display: fallback;
+  font-family: "Salesforce Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SalesforceSans-Regular.ttf");
 }
 
 @font-face {
-	font-display: fallback;
-	font-family: "Salesforce Sans";
-	font-style: bold;
-	font-weight: 700;
-	src: url("../fonts/SalesforceSans-Bold.ttf");
+  font-display: fallback;
+  font-family: "Salesforce Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/SalesforceSans-Bold.ttf");
 }
 
 @font-face {
-	font-display: fallback;
-	font-family: "Open Sans";
-	font-style: normal;
-	font-weight: 400;
-	src: url("../fonts/OpenSans-Regular.ttf");
+  font-display: fallback;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
-	font-display: fallback;
-	font-family: "Open Sans";
-	font-style: bold;
-	font-weight: 700;
-	src: url("../fonts/OpenSans-Bold.ttf");
+  font-display: fallback;
+  font-family: "Open Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../fonts/OpenSans-Bold.ttf");
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont;
-	-webkit-tap-highlight-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header {
-	padding: 1rem;
+  padding: 1rem;
 }
 
 .container {
-	max-width: 64em;
-	margin: 0 auto;
+  max-width: 64em;
+  margin: 0 auto;
 }
 
 .systems {
-	display: grid;
-	grid-auto-flow: column;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	grid-gap: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
 }
 
-.system .container {
+/* .system .container {
 	display: grid;
 	grid-template-columns: 1fr 300px;
 	grid-gap: 1rem;
-}
+} */
 
 .container > h3 {
-	grid-column: 1/3;
+  grid-column: 1/3;
 }
 
 .component-fragments ul {
-	display: grid;
-	grid-auto-flow: row dense;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
-	grid-template-rows: repeat(auto-fit, 200px);
-	grid-gap: 1rem;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, 200px);
+  grid-gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .component-fragments li {
-	--color: #EEEFF0;
-	--color-2: #3B5960;
-	display: grid;
-	align-content: flex-start;
-	justify-content: flex-start;
-	grid-gap: 0.5rem;
-	border: 1px solid var(--color);
-	padding: 1rem;
-	border-radius: 4px;
+  --color: #eeeff0;
+  --color-2: #3b5960;
+  display: grid;
+  align-content: flex-start;
+  justify-content: flex-start;
+  grid-gap: 0.5rem;
+  border: 1px solid var(--color);
+  padding: 1rem;
+  border-radius: 4px;
 }
 
 .component-fragments .span-full {
-	display: block;
+  display: block;
 }
 
 .component-fragments h4 {
-	margin: 0;
-	margin-bottom: 1rem;
-	font-weight: normal;
-	font-size: 0.75rem;
-	text-transform: uppercase;
-	letter-spacing: 0.0375rem;
-	color: var(--color-2);
-	grid-column: 1/3;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0375rem;
+  color: var(--color-2);
+  grid-column: 1/3;
 }
 
 :not(:defined) {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 /* Sections */
 
 section {
-	padding: 2rem 0;
+  padding: 2rem 0;
 }
 
 section h3 {
-	color: var(--color);
+  color: var(--color);
 }
 
 .subsystems {
-	--color: #249BD1;
-	border-top: 1px dashed var(--color);
+  --color: #249bd1;
+  border-top: 1px dashed var(--color);
 }
 
 .bwc {
-	--color: #3B5960;
-	border-top: 1px dashed var(--color);
+  --color: #3b5960;
+  border-top: 1px dashed var(--color);
 }
 
 .system {
-	--color: #FF2D55;
-	border-top: 1px dashed var(--color);
+  --color: #ff2d55;
+  border-top: 1px dashed var(--color);
 }

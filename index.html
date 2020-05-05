@@ -1,156 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="stylesheet" href="public/css/main.css" />
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="public/css/main.css" />
+  </head>
 
-	<body>
-		<main>
-			<header class="header">
-				<div class="container">
-					<color-mode-toggle></color-mode-toggle>
-				</div>
-			</header>
-			<main>
-				<section class="subsystems">
-					<div class="container">
-						<h3>Design System Layers</h3>
-						<div class="systems">
-							<div class="layer">
-								<h4>Product (LEX)</h4>
-								<div class="components">
-									<sds-theme-provider system="slds">
-										<div class="background">
-											<slds-card title="SLDS Card Title">
-												<sds-button-menu slot="headerActions" variant="neutral">
-													<sds-menu-item>New</sds-menu-item>
-													<sds-menu-item>Edit</sds-menu-item>
-													<sds-menu-item>Delete</sds-menu-item>
-												</sds-button-menu>
-												<img
-													id="image"
-													slot="above-content"
-													src="/public/images/carousel-01.jpg"
-													alt=""
-												/>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-												eget velit placerat, scelerisque libero sed, mattis orci.
-											</slds-card>
-										</div>
-									</sds-theme-provider>
-								</div>
-							</div>
-							<div class="layer">
-								<h4>Trailhead</h4>
-								<div class="components">
-									<sds-theme-provider system="trailhead">
-										<div class="background">
-											<th-image-card title="Trailhead Card Title">
-												<img
-													id="image"
-													slot="above-content"
-													src="/public/images/carousel-01.jpg"
-													alt=""
-												/>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-												eget velit placerat, scelerisque libero sed, mattis orci.
-												<div slot="footer">
-													<sds-button variant="neutral">Learn More</sds-button>
-												</div>
-											</th-image-card>
-											<th-trail-card title="Build Lightning Web Components">
-												Develop reusable Lightning web components using JavaScript and HTML.
-												<div slot="footer">
-													<th-button-icon symbol="add"></th-button-icon>
-													<th-button-icon symbol="favorite"></th-button-icon>
-													<th-button-icon symbol="quote"></th-button-icon>
-												</div>
-											</th-trail-card>
-										</div>
-									</sds-theme-provider>
-								</div>
-							</div>
-							<div class="layer">
-								<h4>CodeScience</h4>
-								<div class="components">
-									<sds-theme-provider system="code-science">
-										<div class="background">
-											<cs-card title="CodeScience Card Title">
-												<img
-													id="image"
-													slot="above-content"
-													src="/public/images/codescience.png"
-													alt=""
-												/>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-												eget velit placerat, scelerisque libero sed, mattis orci.
-												<div slot="footer">
-													<sds-button variant="neutral">Turn Off</sds-button>
-													<sds-button variant="brand">Turn On</sds-button>
-												</div>
-											</cs-card>
-										</div>
-									</sds-theme-provider>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+  <body>
+    <main>
+      <header class="header">
+        <div class="container">
+          <color-mode-toggle></color-mode-toggle>
+        </div>
+      </header>
+      <main>
+        <section class="subsystems">
+          <div class="container">
+            <h3>Design System Layers</h3>
+            <div class="systems">
+              <div class="layer">
+                <h4>Product (LEX)</h4>
+                <div class="components">
+                  <sds-theme-provider system="slds">
+                    <div class="background">
+                      <slds-card title="SLDS Card Title">
+                        <sds-button-menu slot="headerActions" variant="neutral">
+                          <sds-menu-item>New</sds-menu-item>
+                          <sds-menu-item>Edit</sds-menu-item>
+                          <sds-menu-item>Delete</sds-menu-item>
+                        </sds-button-menu>
+                        <img
+                          id="image"
+                          slot="above-content"
+                          src="/public/images/carousel-01.jpg"
+                          alt=""
+                        />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean eget velit placerat, scelerisque libero sed,
+                        mattis orci.
+                      </slds-card>
+                    </div>
+                  </sds-theme-provider>
+                </div>
+              </div>
+              <div class="layer">
+                <h4>Trailhead</h4>
+                <div class="components">
+                  <sds-theme-provider system="trailhead">
+                    <div class="background">
+                      <th-image-card title="Trailhead Card Title">
+                        <img
+                          id="image"
+                          slot="above-content"
+                          src="/public/images/carousel-01.jpg"
+                          alt=""
+                        />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean eget velit placerat, scelerisque libero sed,
+                        mattis orci.
+                        <div slot="footer">
+                          <sds-button variant="neutral">Learn More</sds-button>
+                        </div>
+                      </th-image-card>
+                      <th-trail-card title="Build Lightning Web Components">
+                        Develop reusable Lightning web components using
+                        JavaScript and HTML.
+                        <div slot="footer">
+                          <th-button-icon symbol="add"></th-button-icon>
+                          <th-button-icon symbol="favorite"></th-button-icon>
+                          <th-button-icon symbol="quote"></th-button-icon>
+                        </div>
+                      </th-trail-card>
+                    </div>
+                  </sds-theme-provider>
+                </div>
+              </div>
+              <div class="layer">
+                <h4>CodeScience</h4>
+                <div class="components">
+                  <sds-theme-provider system="code-science">
+                    <div class="background">
+                      <cs-card title="CodeScience Card Title">
+                        <img
+                          id="image"
+                          slot="above-content"
+                          src="/public/images/codescience.png"
+                          alt=""
+                        />
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean eget velit placerat, scelerisque libero sed,
+                        mattis orci.
+                        <div slot="footer">
+                          <sds-button variant="neutral">Turn Off</sds-button>
+                          <sds-button variant="brand">Turn On</sds-button>
+                        </div>
+                      </cs-card>
+                    </div>
+                  </sds-theme-provider>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-				<section class="system">
-					<div class="container">
-						<h3>Design System</h3>
-						<div class="sds">
-							<h4>Salesforce Design System Base (Styling API)</h4>
-							<div class="component-fragments">
-								<ul>
-									<li>
-										<h4>Buttons</h4>
-										<sds-button variant="neutral">Button</sds-button>
-										<sds-button variant="brand">Button</sds-button>
-										<sds-button variant="brand-outline">Button</sds-button>
-										<sds-button>Text Button</sds-button>
-									</li>
-									<li class="span-full">
-										<h4>Icons</h4>
-										<sds-icon boundarysize="small"></sds-icon>
-										<sds-icon set="standard" symbol="opportunity"></sds-icon>
-										<sds-icon set="standard" symbol="case" size="large"></sds-icon>
-									</li>
-									<li>
-										<h4>Button Icon</h4>
-										<sds-button-icon symbol="add" variant="neutral" size="medium"></sds-button-icon>
-									</li>
-									<li>
-										<h4>Button Menu</h4>
-										<sds-button-menu variant="neutral">
-											<sds-menu-item>One</sds-menu-item>
-											<sds-menu-item>Two</sds-menu-item>
-											<sds-menu-item>Three</sds-menu-item>
-											<sds-menu-item>Four</sds-menu-item>
-										</sds-button-menu>
-									</li>
-									<li>
-										<h4>Picklist</h4>
-										<sds-picklist variant="neutral" aria-label="Skill level">
-											<sds-menu-item>Beginner</sds-menu-item>
-											<sds-menu-item>Intermediate</sds-menu-item>
-											<sds-menu-item>Expert</sds-menu-item>
-										</sds-picklist>
-									</li>
-									<li class="span-full">
-										<h4>Card</h4>
-										<sds-card title="Card Title">
-											Content Card
-											<span slot="footer">Card Footer</span>
-										</sds-card>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="carbon">
+        <section class="system">
+          <div class="container">
+            <h3>Design System</h3>
+            <div class="sds">
+              <h4>Salesforce Design System Base (Styling API)</h4>
+              <div class="component-fragments">
+                <ul>
+                  <li>
+                    <h4>Buttons</h4>
+                    <sds-button variant="neutral">Button</sds-button>
+                    <sds-button variant="brand">Button</sds-button>
+                    <sds-button variant="brand-outline">Button</sds-button>
+                    <sds-button>Text Button</sds-button>
+                  </li>
+                  <li class="span-full">
+                    <h4>Icons</h4>
+                    <sds-icon boundarysize="small"></sds-icon>
+                    <sds-icon set="standard" symbol="opportunity"></sds-icon>
+                    <sds-icon
+                      set="standard"
+                      symbol="case"
+                      size="large"
+                    ></sds-icon>
+                  </li>
+                  <li>
+                    <h4>Button Icon</h4>
+                    <sds-button-icon
+                      symbol="add"
+                      variant="neutral"
+                      size="medium"
+                    ></sds-button-icon>
+                  </li>
+                  <li>
+                    <h4>Button Menu</h4>
+                    <sds-button-menu variant="neutral">
+                      <sds-menu-item>One</sds-menu-item>
+                      <sds-menu-item>Two</sds-menu-item>
+                      <sds-menu-item>Three</sds-menu-item>
+                      <sds-menu-item>Four</sds-menu-item>
+                    </sds-button-menu>
+                  </li>
+                  <li>
+                    <h4>Picklist</h4>
+                    <sds-picklist variant="neutral" aria-label="Skill level">
+                      <sds-menu-item>Beginner</sds-menu-item>
+                      <sds-menu-item>Intermediate</sds-menu-item>
+                      <sds-menu-item>Expert</sds-menu-item>
+                    </sds-picklist>
+                  </li>
+                  <li class="span-full">
+                    <h4>Card</h4>
+                    <sds-card title="Card Title">
+                      Content Card
+                      <span slot="footer">Card Footer</span>
+                    </sds-card>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="carbon">
 							<h4>IBM Carbon Design System</h4>
 							<div class="component-fragments">
 								<ul>
@@ -171,51 +183,51 @@
 									</li>
 								</ul>
 							</div>
-						</div>
-					</div>
-				</section>
-				<section class="bwc">
-					<div class="container">
-						<h3>Base Web Component (OS)</h3>
-						<div class="component-fragments">
-							<ul>
-								<li>
-									<h4>Buttons</h4>
-									<elix-button>Button</elix-button>
-									<elix-border-button>Button</elix-border-button>
-								</li>
-								<li>
-									<h4>Button Menu</h4>
-									<elix-menu-button>
-										<div>One</div>
-										<div>Two</div>
-										<div>Three</div>
-										<div>Four</div>
-									</elix-menu-button>
-								</li>
-								<li>
-									<h4>Dropdown List</h4>
-									<elix-dropdown-list aria-label="Skill level">
-										<div>Beginner</div>
-										<div>Intermediate</div>
-										<div>Expert</div>
-									</elix-dropdown-list>
-								</li>
-								<li>
-									<h4>Layout (Vertical Stack)</h4>
-									<base-vstack>
-										<div slot="above-content">VStack above content</div>
-										VStack content
-										<div slot="below-content">VStack below content</div>
-									</base-vstack>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-			</main>
-		</main>
-		<!-- Base Web Component -->
-		<script type="module" src="./src/main.js"></script>
-	</body>
+						</div> -->
+          </div>
+        </section>
+        <section class="bwc">
+          <div class="container">
+            <h3>Base Web Component (OS)</h3>
+            <div class="component-fragments">
+              <ul>
+                <li>
+                  <h4>Buttons</h4>
+                  <elix-button>Button</elix-button>
+                  <elix-border-button>Button</elix-border-button>
+                </li>
+                <li>
+                  <h4>Button Menu</h4>
+                  <elix-menu-button>
+                    <div>One</div>
+                    <div>Two</div>
+                    <div>Three</div>
+                    <div>Four</div>
+                  </elix-menu-button>
+                </li>
+                <li>
+                  <h4>Dropdown List</h4>
+                  <elix-dropdown-list aria-label="Skill level">
+                    <div>Beginner</div>
+                    <div>Intermediate</div>
+                    <div>Expert</div>
+                  </elix-dropdown-list>
+                </li>
+                <li>
+                  <h4>Layout (Vertical Stack)</h4>
+                  <base-vstack>
+                    <div slot="above-content">VStack above content</div>
+                    VStack content
+                    <div slot="below-content">VStack below content</div>
+                  </base-vstack>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </main>
+    <!-- Base Web Component -->
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>
